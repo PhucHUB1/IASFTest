@@ -13,13 +13,7 @@ public class MembersService {
     @Autowired
     private MembersRepository membersRepository;
 
-    public List<Members> getAllVehicles() {
-        return membersRepository.findAll();
-    }
-
-    public Members getMembersById(long id) {
-        return membersRepository.findById(id).orElse(null);
-    }
-
-
+    public void deleteMembers(long id) {
+        membersRepository.deleteById(id);
+     }
 }
